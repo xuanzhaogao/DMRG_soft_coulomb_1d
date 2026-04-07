@@ -179,7 +179,7 @@ function main()
         flush(stdout)
 
         # Save MPS to HDF5
-        h5open("$(name)_psi.h5", "w") do f
+        h5open("data/$(name)_psi.h5", "w") do f
             write(f, "psi", psi)
             write(f, "energy", energy)
         end

@@ -191,7 +191,7 @@ function study_Li()
     @printf "Li  ref = %.13f   err = %+.3e\n" ref (E - ref)
     flush(stdout)
 
-    h5open("Li_psi.h5", "w") do f
+    h5open("data/Li_psi.h5", "w") do f
         write(f, "psi", psi)
         write(f, "energy", E)
     end
