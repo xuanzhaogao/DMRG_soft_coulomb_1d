@@ -1,0 +1,9 @@
+/var/spool/slurmd/job6205040/slurm_script: line 26: cd: /mnt/home/xgao1/work/tnn_reference: No such file or directory
+ERROR: SystemError: opening file "/mnt/home/xgao1/work/DMRG_soft_coulomb_1d/jobs/dmrg_conv.jl": No such file or directory
+Stacktrace:
+ [1] include(mod::Module, _path::String)
+   @ Base ./Base.jl:306
+ [2] exec_options(opts::Base.JLOptions)
+   @ Base ./client.jl:317
+ [3] _start()
+   @ Base ./client.jl:550
