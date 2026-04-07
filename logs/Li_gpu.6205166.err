@@ -1,0 +1,20 @@
+Precompiling packages...
+   4470.6 ms  ✓ CUDA_Compiler_jll
+  34695.1 ms  ✓ CUDA
+   3802.3 ms  ✓ Atomix → AtomixCUDAExt
+  3 dependencies successfully precompiled in 46 seconds. 89 already precompiled.
+Precompiling packages...
+   3461.4 ms  ✓ StridedViews → StridedViewsCUDAExt
+  1 dependency successfully precompiled in 4 seconds. 94 already precompiled.
+Precompiling packages...
+   3473.2 ms  ✓ Strided → StridedCUDAExt
+  1 dependency successfully precompiled in 4 seconds. 98 already precompiled.
+Precompiling packages...
+   3477.7 ms  ✓ CUDA → ChainRulesCoreExt
+  1 dependency successfully precompiled in 4 seconds. 98 already precompiled.
+Precompiling packages...
+   3522.0 ms  ✓ ArrayInterface → ArrayInterfaceCUDAExt
+   4066.3 ms  ✓ NDTensors → NDTensorsCUDAExt
+  2 dependencies successfully precompiled in 5 seconds. 165 already precompiled.
+[ Info: GPU: NVIDIA A100-SXM4-80GB, 81341 MiB
+[ Info: Moving H and psi to GPU...

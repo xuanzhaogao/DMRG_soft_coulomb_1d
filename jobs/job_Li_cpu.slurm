@@ -1,11 +1,10 @@
 #!/bin/bash
-#SBATCH --job-name=Li_gpu
-#SBATCH --output=logs/Li_gpu.%J.out
-#SBATCH --error=logs/Li_gpu.%J.err
-#SBATCH -p gpu
-#SBATCH -C a100-80gb
-#SBATCH -N1 -n1 -c 16 --gpus-per-task=1
-#SBATCH --time=12:00:00
+#SBATCH --job-name=Li_cpu
+#SBATCH --output=logs/Li_cpu.%J.out
+#SBATCH --error=logs/Li_cpu.%J.err
+#SBATCH -p ccm
+#SBATCH -N1 -n1 -c 16
+#SBATCH --time=24:00:00
 
 cd /mnt/home/xgao1/work/DMRG_soft_coulomb_1d
 
@@ -16,6 +15,6 @@ export DMRG_SYSTEMS=Li
 export DMRG_MAXBOND=1000
 export DMRG_ETOL=1e-8
 export DMRG_MAXSWEEPS=200
-export USE_GPU=true
+export USE_GPU=false
 
 julia src/dmrg_gpu.jl

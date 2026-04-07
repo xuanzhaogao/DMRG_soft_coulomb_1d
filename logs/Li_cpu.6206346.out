@@ -1,0 +1,82 @@
+
+============================================================
+System: Li  N=3  z=3  Nup=2  Ndn=1
+Grid:   rc=20  L=400  δ=0.1000
+============================================================
+MPO bond dim = 17
+After sweep 1 energy=-2.1148083523995345  maxlinkdim=43 maxerr=9.88E-13 time=26.852
+After sweep 2 energy=-2.3684348994049174  maxlinkdim=38 maxerr=9.99E-13 time=1.744
+After sweep 3 energy=-2.415449864185046  maxlinkdim=35 maxerr=9.99E-13 time=1.669
+After sweep 4 energy=-2.444226592029172  maxlinkdim=19 maxerr=9.99E-13 time=1.546
+After sweep 5 energy=-2.462082454175146  maxlinkdim=11 maxerr=9.93E-13 time=6.885
+After sweep 6 energy=-2.475296922198254  maxlinkdim=14 maxerr=9.88E-13 time=0.908
+After sweep 7 energy=-3.1245473341498613  maxlinkdim=17 maxerr=9.74E-13 time=1.021
+  After ramp-up (7 sweeps): E = -3.1245473341499
+After sweep 1 energy=-3.548654418313358  maxlinkdim=19 maxerr=9.88E-13 time=0.854
+After sweep 2 energy=-3.701809009392673  maxlinkdim=20 maxerr=9.89E-13 time=0.905
+After sweep 3 energy=-3.8121171836718526  maxlinkdim=21 maxerr=1.00E-12 time=0.949
+After sweep 4 energy=-3.877870714757953  maxlinkdim=20 maxerr=9.99E-13 time=1.027
+After sweep 5 energy=-3.9106751217766114  maxlinkdim=18 maxerr=9.96E-13 time=0.897
+  After 12 sweeps: E = -3.9106751217766  |ΔE| = 7.861e-01
+After sweep 1 energy=-3.9283708753772197  maxlinkdim=18 maxerr=9.99E-13 time=0.892
+After sweep 2 energy=-3.9387330476496984  maxlinkdim=17 maxerr=9.93E-13 time=1.097
+After sweep 3 energy=-3.9459659753194076  maxlinkdim=18 maxerr=9.95E-13 time=1.146
+After sweep 4 energy=-3.9523523808205674  maxlinkdim=20 maxerr=9.99E-13 time=1.246
+After sweep 5 energy=-3.959013988098422  maxlinkdim=26 maxerr=9.97E-13 time=1.309
+  After 17 sweeps: E = -3.9590139880984  |ΔE| = 4.834e-02
+After sweep 1 energy=-3.9690893240068363  maxlinkdim=33 maxerr=1.00E-12 time=1.379
+After sweep 2 energy=-3.981724336455514  maxlinkdim=38 maxerr=9.98E-13 time=1.447
+After sweep 3 energy=-3.999072289372348  maxlinkdim=43 maxerr=9.86E-13 time=1.599
+After sweep 4 energy=-4.0248851266423955  maxlinkdim=47 maxerr=9.98E-13 time=1.493
+After sweep 5 energy=-4.0610003313218055  maxlinkdim=51 maxerr=9.92E-13 time=1.685
+  After 22 sweeps: E = -4.0610003313218  |ΔE| = 1.020e-01
+After sweep 1 energy=-4.102440691926211  maxlinkdim=54 maxerr=9.81E-13 time=1.628
+After sweep 2 energy=-4.13973132397165  maxlinkdim=56 maxerr=9.97E-13 time=1.732
+After sweep 3 energy=-4.167033955018838  maxlinkdim=57 maxerr=9.98E-13 time=1.773
+After sweep 4 energy=-4.184666955652575  maxlinkdim=57 maxerr=9.97E-13 time=1.643
+After sweep 5 energy=-4.195443677003197  maxlinkdim=57 maxerr=9.95E-13 time=1.739
+  After 27 sweeps: E = -4.1954436770032  |ΔE| = 1.344e-01
+After sweep 1 energy=-4.2018676092875955  maxlinkdim=57 maxerr=9.99E-13 time=1.709
+After sweep 2 energy=-4.20564174654847  maxlinkdim=56 maxerr=9.96E-13 time=1.598
+After sweep 3 energy=-4.207904190966546  maxlinkdim=55 maxerr=9.98E-13 time=1.700
+After sweep 4 energy=-4.209262805468233  maxlinkdim=55 maxerr=9.91E-13 time=1.681
+After sweep 5 energy=-4.210070024297326  maxlinkdim=54 maxerr=9.99E-13 time=1.547
+  After 32 sweeps: E = -4.2100700242973  |ΔE| = 1.463e-02
+After sweep 1 energy=-4.210553826511092  maxlinkdim=53 maxerr=9.96E-13 time=1.625
+After sweep 2 energy=-4.21084656862555  maxlinkdim=52 maxerr=9.93E-13 time=1.516
+After sweep 3 energy=-4.211025766827227  maxlinkdim=50 maxerr=9.95E-13 time=1.700
+After sweep 4 energy=-4.21113536590617  maxlinkdim=49 maxerr=9.97E-13 time=1.531
+After sweep 5 energy=-4.211201727384142  maxlinkdim=47 maxerr=9.95E-13 time=1.502
+  After 37 sweeps: E = -4.2112017273841  |ΔE| = 1.132e-03
+After sweep 1 energy=-4.211241788747002  maxlinkdim=45 maxerr=9.91E-13 time=1.636
+After sweep 2 energy=-4.211265700217253  maxlinkdim=41 maxerr=9.94E-13 time=1.502
+After sweep 3 energy=-4.211280301302816  maxlinkdim=39 maxerr=9.98E-13 time=1.473
+After sweep 4 energy=-4.211288787502352  maxlinkdim=36 maxerr=9.96E-13 time=1.476
+After sweep 5 energy=-4.211293606959809  maxlinkdim=33 maxerr=9.94E-13 time=1.482
+  After 42 sweeps: E = -4.2112936069598  |ΔE| = 9.188e-05
+After sweep 1 energy=-4.211296518077126  maxlinkdim=30 maxerr=9.97E-13 time=1.445
+After sweep 2 energy=-4.211298326415889  maxlinkdim=31 maxerr=9.98E-13 time=1.496
+After sweep 3 energy=-4.21129906644886  maxlinkdim=30 maxerr=9.93E-13 time=1.481
+After sweep 4 energy=-4.211299337452594  maxlinkdim=28 maxerr=9.89E-13 time=1.477
+After sweep 5 energy=-4.211299449010768  maxlinkdim=26 maxerr=9.82E-13 time=1.480
+  After 47 sweeps: E = -4.2112994490108  |ΔE| = 5.842e-06
+After sweep 1 energy=-4.211299499862366  maxlinkdim=26 maxerr=9.91E-13 time=1.479
+After sweep 2 energy=-4.211299523498968  maxlinkdim=26 maxerr=9.95E-13 time=1.479
+After sweep 3 energy=-4.211299534751333  maxlinkdim=26 maxerr=9.99E-13 time=1.470
+After sweep 4 energy=-4.211299540428459  maxlinkdim=26 maxerr=9.98E-13 time=1.464
+After sweep 5 energy=-4.211299543325681  maxlinkdim=26 maxerr=9.99E-13 time=1.607
+  After 52 sweeps: E = -4.2112995433257  |ΔE| = 9.431e-08
+After sweep 1 energy=-4.211299544895236  maxlinkdim=26 maxerr=9.99E-13 time=1.478
+After sweep 2 energy=-4.2112995458969005  maxlinkdim=26 maxerr=9.99E-13 time=1.481
+After sweep 3 energy=-4.21129954644525  maxlinkdim=26 maxerr=9.99E-13 time=1.459
+After sweep 4 energy=-4.211299546782831  maxlinkdim=26 maxerr=1.00E-12 time=1.487
+After sweep 5 energy=-4.211299547002334  maxlinkdim=26 maxerr=1.00E-12 time=1.477
+  After 57 sweeps: E = -4.2112995470023  |ΔE| = 3.677e-09
+1641.268160 seconds (3.12 G allocations: 2.612 TiB, 22.97% gc time, 30.50% compilation time: <1% of which was recompilation)
+
+Li    E = -4.2112995470023   ref = -4.2105316476132   err = -7.679e-04
+
+============================================================
+System  E_DMRG                E_ref                 Error       
+------------------------------------------------------------
+Li          -4.2112995470023      -4.2105316476132    -7.679e-04

@@ -62,16 +62,21 @@ function make_initial_mps(sites, L::Int, Nup::Int, Ndn::Int)
     return MPS(sites, state)
 end
 
-function run_dmrg(H, psi0; max_bond::Int=500, cutoff::Float64=1e-12, nsweeps::Int=20,
-                   use_gpu::Bool=false)
-    ramp = [50, 100, 200, 400, 600, 800, 1000]
-    dims = vcat(ramp, fill(max_bond, max(nsweeps - length(ramp), 0)))[1:nsweeps]
-    dims = min.(dims, max_bond)
-    noise = vcat([1e-5, 1e-6, 1e-7, 1e-8], fill(0.0, max(nsweeps-4, 0)))[1:nsweeps]
-    sweeps = Sweeps(nsweeps)
-    setmaxdim!(sweeps, dims...)
-    setcutoff!(sweeps, fill(cutoff, nsweeps)...)
-    setnoise!(sweeps, noise...)
+function run_dmrg(H, psi0; max_bond::Int=500, cutoff::Float64=1e-12,
+                   use_gpu::Bool=false, etol::Float64=1e-8, max_sweeps::Int=200,
+                   sweeps_per_batch::Int=5)
+    # Phase 1: ramp-up sweeps to grow bond dimension
+    ramp = filter(<=(max_bond), [50, 100, 200, 400, 600, 800, 1000])
+    n_ramp = length(ramp)
+    noise_ramp = [1e-5, 1e-6, 1e-7, 1e-8]
+    n_ramp_total = max(n_ramp, length(noise_ramp))
+    dims_ramp = vcat(ramp, fill(max_bond, max(n_ramp_total - n_ramp, 0)))[1:n_ramp_total]
+    noise_ramp_full = vcat(noise_ramp, fill(0.0, max(n_ramp_total - length(noise_ramp), 0)))[1:n_ramp_total]
+
+    sweeps_ramp = Sweeps(n_ramp_total)
+    setmaxdim!(sweeps_ramp, dims_ramp...)
+    setcutoff!(sweeps_ramp, fill(cutoff, n_ramp_total)...)
+    setnoise!(sweeps_ramp, noise_ramp_full...)
 
     if use_gpu
         @info "Moving H and psi to GPU..."
@@ -82,8 +87,36 @@ function run_dmrg(H, psi0; max_bond::Int=500, cutoff::Float64=1e-12, nsweeps::In
         psi_run = psi0
     end
 
-    energy, psi_out = dmrg(H_run, psi_run, sweeps; outputlevel=1)
-    psi_cpu = use_gpu ? NDTensors.cpu(psi_out) : psi_out
+    @info "Phase 1: ramp-up ($n_ramp_total sweeps)"
+    energy, psi_run = dmrg(H_run, psi_run, sweeps_ramp; outputlevel=1)
+    total_sweeps = n_ramp_total
+    @printf "  After ramp-up (%d sweeps): E = %.13f\n" total_sweeps energy
+    flush(stdout)
+
+    # Phase 2: iterate at full bond dimension until convergence
+    batch_sweeps = Sweeps(sweeps_per_batch)
+    setmaxdim!(batch_sweeps, fill(max_bond, sweeps_per_batch)...)
+    setcutoff!(batch_sweeps, fill(cutoff, sweeps_per_batch)...)
+    setnoise!(batch_sweeps, fill(0.0, sweeps_per_batch)...)
+
+    prev_energy = energy
+    while total_sweeps < max_sweeps
+        energy, psi_run = dmrg(H_run, psi_run, batch_sweeps; outputlevel=1)
+        total_sweeps += sweeps_per_batch
+        dE = abs(energy - prev_energy)
+        @printf "  After %d sweeps: E = %.13f  |ΔE| = %.3e\n" total_sweeps energy dE
+        flush(stdout)
+        if dE < etol
+            @info "Energy converged: |ΔE| = $(dE) < $(etol) after $total_sweeps sweeps"
+            break
+        end
+        prev_energy = energy
+    end
+    if total_sweeps >= max_sweeps
+        @warn "Reached max_sweeps=$max_sweeps without converging (|ΔE| = $(abs(energy - prev_energy)))"
+    end
+
+    psi_cpu = use_gpu ? NDTensors.cpu(psi_run) : psi_run
     return energy, psi_cpu
 end
 
@@ -110,10 +143,11 @@ function main()
     )
 
     delta = 0.1
-    run_list = Set(strip.(split(get(ENV, "DMRG_SYSTEMS", "H,He"), ",")))
-    max_bond = parse(Int, get(ENV, "DMRG_MAXBOND", "500"))
-    nsweeps  = parse(Int, get(ENV, "DMRG_NSWEEPS", "20"))
-    use_gpu  = parse(Bool, get(ENV, "USE_GPU", "false"))
+    run_list   = Set(strip.(split(get(ENV, "DMRG_SYSTEMS", "H,He"), ",")))
+    max_bond   = parse(Int, get(ENV, "DMRG_MAXBOND", "500"))
+    max_sweeps = parse(Int, get(ENV, "DMRG_MAXSWEEPS", "200"))
+    etol       = parse(Float64, get(ENV, "DMRG_ETOL", "1e-8"))
+    use_gpu    = parse(Bool, get(ENV, "USE_GPU", "false"))
 
     if use_gpu && CUDA.functional()
         @info "GPU: $(CUDA.name(CUDA.device())), $(CUDA.totalmem(CUDA.device()) ÷ 1024^2) MiB"
@@ -142,7 +176,7 @@ function main()
 
             psi0 = make_initial_mps(sites, L, Nup, Ndn)
             energy, psi = run_dmrg(H, psi0; max_bond=max_bond, cutoff=1e-12,
-                                    nsweeps=nsweeps, use_gpu=use_gpu)
+                                    use_gpu=use_gpu, etol=etol, max_sweeps=max_sweeps)
         end
 
         results[name] = energy
@@ -154,6 +188,7 @@ function main()
         h5open("data/$(name)_psi.h5", "w") do f
             write(f, "psi", psi)
             write(f, "energy", energy)
+            write(f, "H", H)
         end
     end
 

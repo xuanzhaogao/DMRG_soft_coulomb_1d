@@ -1,0 +1,20 @@
+Precompiling packages...
+   3152.6 ms  ✓ CUDA_Compiler_jll
+  25899.0 ms  ✓ CUDA
+   2912.7 ms  ✓ Atomix → AtomixCUDAExt
+  3 dependencies successfully precompiled in 33 seconds. 89 already precompiled.
+Precompiling packages...
+   2863.8 ms  ✓ StridedViews → StridedViewsCUDAExt
+  1 dependency successfully precompiled in 3 seconds. 94 already precompiled.
+Precompiling packages...
+   2872.7 ms  ✓ Strided → StridedCUDAExt
+  1 dependency successfully precompiled in 3 seconds. 98 already precompiled.
+Precompiling packages...
+   2856.8 ms  ✓ CUDA → ChainRulesCoreExt
+  1 dependency successfully precompiled in 3 seconds. 98 already precompiled.
+Precompiling packages...
+   2959.1 ms  ✓ ArrayInterface → ArrayInterfaceCUDAExt
+   3218.1 ms  ✓ NDTensors → NDTensorsCUDAExt
+  2 dependencies successfully precompiled in 4 seconds. 165 already precompiled.
+[ Info: Phase 1: ramp-up (7 sweeps)
+[ Info: Energy converged: |ΔE| = 3.676653648199135e-9 < 1.0e-8 after 57 sweeps
