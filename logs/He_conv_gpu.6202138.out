@@ -1,0 +1,8 @@
+He conv GPU job 6202138 on workergpu039 at Tue Apr  7 10:34:30 EDT 2026
+Threads: 16
+NVIDIA A100-SXM4-80GB, 81920 MiB
+--- Bond-dim convergence ---
+
+=== He bond-dim convergence  (δ=0.10, L=260) ===
+max_χ     Energy                  act_χ     ΔE(prev)      err_vs_ref  
+----------------------------------------------------------------------

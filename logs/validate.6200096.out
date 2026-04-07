@@ -1,0 +1,9 @@
+Validation job 6200096 on worker7018 at Mon Apr  6 18:06:13 EDT 2026
+Julia threads: 8
+
+============================================================
+System: H  N=1  z=1  Nup=1  Ndn=0
+Grid:   rc=15  L=300  δ=0.1000
+============================================================
+MPO bond dim = 16
+Done at Mon Apr  6 18:15:29 EDT 2026

@@ -1,0 +1,53 @@
+┌ Warning: Module StridedViews with build ID fafbfcfd-b074-adbd-7d08-009e23512c59 is missing from the cache.
+│ This may mean StridedViews [4db3bf67-4bd7-4b4e-b153-31dc3fb37143] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:2641
+┌ Warning: Module NDTensors with build ID fafbfcfd-3b3d-b168-8d50-9c24c1325e95 is missing from the cache.
+│ This may mean NDTensors [23ae76d9-e61a-49c4-8f12-3f1a16adf9cf] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:2641
+┌ Warning: Module ITensors with build ID fafbfcfd-d2dc-d67f-0786-e867130715b7 is missing from the cache.
+│ This may mean ITensors [9136182c-28ba-11e9-034c-db9fb085ebd5] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:2641
+WARNING: ignoring conflicting import of ITensors.cu into ITensorGPU
+WARNING: Detected access to binding `ITensorGPU.cuITensor` in a world prior to its definition world.
+  Julia 1.12 has introduced more strict world age semantics for global bindings.
+  !!! This code may malfunction under Revise.
+  !!! This code will error in future versions of Julia.
+Hint: Add an appropriate `invokelatest` around the access to this binding.
+To make this warning an error, and hence obtain a stack trace, use `julia --depwarn=error`.
+WARNING: Detected access to binding `ITensorGPU.cuMPO` in a world prior to its definition world.
+  Julia 1.12 has introduced more strict world age semantics for global bindings.
+  !!! This code may malfunction under Revise.
+  !!! This code will error in future versions of Julia.
+Hint: Add an appropriate `invokelatest` around the access to this binding.
+To make this warning an error, and hence obtain a stack trace, use `julia --depwarn=error`.
+WARNING: Detected access to binding `ITensorGPU.cuMPS` in a world prior to its definition world.
+  Julia 1.12 has introduced more strict world age semantics for global bindings.
+  !!! This code may malfunction under Revise.
+  !!! This code will error in future versions of Julia.
+Hint: Add an appropriate `invokelatest` around the access to this binding.
+To make this warning an error, and hence obtain a stack trace, use `julia --depwarn=error`.
+WARNING: Detected access to binding `ITensorGPU.productCuMPS` in a world prior to its definition world.
+  Julia 1.12 has introduced more strict world age semantics for global bindings.
+  !!! This code may malfunction under Revise.
+  !!! This code will error in future versions of Julia.
+Hint: Add an appropriate `invokelatest` around the access to this binding.
+To make this warning an error, and hence obtain a stack trace, use `julia --depwarn=error`.
+WARNING: Detected access to binding `ITensorGPU.randomCuITensor` in a world prior to its definition world.
+  Julia 1.12 has introduced more strict world age semantics for global bindings.
+  !!! This code may malfunction under Revise.
+  !!! This code will error in future versions of Julia.
+Hint: Add an appropriate `invokelatest` around the access to this binding.
+To make this warning an error, and hence obtain a stack trace, use `julia --depwarn=error`.
+WARNING: Detected access to binding `ITensorGPU.randomCuMPO` in a world prior to its definition world.
+  Julia 1.12 has introduced more strict world age semantics for global bindings.
+  !!! This code may malfunction under Revise.
+  !!! This code will error in future versions of Julia.
+Hint: Add an appropriate `invokelatest` around the access to this binding.
+To make this warning an error, and hence obtain a stack trace, use `julia --depwarn=error`.
+WARNING: Detected access to binding `ITensorGPU.randomCuMPS` in a world prior to its definition world.
+  Julia 1.12 has introduced more strict world age semantics for global bindings.
+  !!! This code may malfunction under Revise.
+  !!! This code will error in future versions of Julia.
+Hint: Add an appropriate `invokelatest` around the access to this binding.
+To make this warning an error, and hence obtain a stack trace, use `julia --depwarn=error`.
+slurmstepd: error: *** JOB 6202132 ON workergpu038 CANCELLED AT 2026-04-07T10:38:28 ***

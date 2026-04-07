@@ -1,0 +1,57 @@
+Validation job 6202074 on worker5039 at Tue Apr  7 10:08:55 EDT 2026
+Julia threads: 8
+
+============================================================
+System: H  N=1  z=1  Nup=1  Ndn=0
+Grid:   rc=15  L=300  δ=0.1000
+============================================================
+MPO bond dim = 6
+After sweep 1 energy=-0.33827834136311513  maxlinkdim=7 maxerr=9.73E-13 time=29.825
+After sweep 2 energy=-0.5940638637687528  maxlinkdim=7 maxerr=9.74E-13 time=0.787
+After sweep 3 energy=-0.6571118601980276  maxlinkdim=7 maxerr=9.72E-13 time=0.827
+After sweep 4 energy=-0.6682285485795747  maxlinkdim=6 maxerr=9.77E-13 time=0.840
+After sweep 5 energy=-0.669703029384085  maxlinkdim=2 maxerr=7.23E-13 time=7.498
+After sweep 6 energy=-0.6698260734317835  maxlinkdim=2 maxerr=7.23E-13 time=0.490
+After sweep 7 energy=-0.6698518829276473  maxlinkdim=2 maxerr=6.15E-13 time=0.531
+After sweep 8 energy=-0.6698576507754664  maxlinkdim=2 maxerr=7.51E-13 time=0.554
+After sweep 9 energy=-0.6698590977732805  maxlinkdim=2 maxerr=8.03E-13 time=0.602
+After sweep 10 energy=-0.6698594497472562  maxlinkdim=2 maxerr=7.72E-13 time=0.640
+After sweep 11 energy=-0.6698595304123109  maxlinkdim=2 maxerr=7.39E-13 time=0.581
+After sweep 12 energy=-0.6698595478797966  maxlinkdim=2 maxerr=9.81E-13 time=0.578
+After sweep 13 energy=-0.6698595502604863  maxlinkdim=2 maxerr=9.81E-13 time=0.572
+After sweep 14 energy=-0.6698595507328997  maxlinkdim=2 maxerr=9.50E-13 time=0.585
+After sweep 15 energy=-0.6698595509728094  maxlinkdim=2 maxerr=9.11E-13 time=0.590
+ 84.357443 seconds (257.93 M allocations: 18.172 GiB, 3.22% gc time, 185.93% compilation time)
+
+H     E = -0.6698595509728   ref = -0.6697771382138   err = -8.241e-05
+
+============================================================
+System: He  N=2  z=2  Nup=1  Ndn=1
+Grid:   rc=13  L=260  δ=0.1000
+============================================================
+MPO bond dim = 16
+After sweep 1 energy=-1.679383752942329  maxlinkdim=50 maxerr=7.56E-11 time=2.562
+After sweep 2 energy=-2.1952489379294757  maxlinkdim=67 maxerr=9.98E-13 time=2.347
+After sweep 3 energy=-2.227384115501679  maxlinkdim=51 maxerr=9.99E-13 time=2.233
+After sweep 4 energy=-2.2341337990667873  maxlinkdim=43 maxerr=9.98E-13 time=2.169
+After sweep 5 energy=-2.2364220857193584  maxlinkdim=20 maxerr=9.98E-13 time=1.545
+After sweep 6 energy=-2.2374664896065197  maxlinkdim=16 maxerr=9.90E-13 time=1.529
+After sweep 7 energy=-2.2380006599243276  maxlinkdim=15 maxerr=9.86E-13 time=1.375
+After sweep 8 energy=-2.2382753369054824  maxlinkdim=14 maxerr=9.87E-13 time=1.553
+After sweep 9 energy=-2.238411918565104  maxlinkdim=14 maxerr=9.95E-13 time=1.421
+After sweep 10 energy=-2.2384804800539113  maxlinkdim=12 maxerr=9.86E-13 time=1.600
+After sweep 11 energy=-2.2385154402498375  maxlinkdim=12 maxerr=9.70E-13 time=1.538
+After sweep 12 energy=-2.238532698932692  maxlinkdim=12 maxerr=9.92E-13 time=1.655
+After sweep 13 energy=-2.2385412439194448  maxlinkdim=12 maxerr=9.82E-13 time=1.438
+After sweep 14 energy=-2.2385455778336696  maxlinkdim=12 maxerr=9.92E-13 time=1.598
+After sweep 15 energy=-2.238547794262899  maxlinkdim=12 maxerr=1.00E-12 time=1.436
+525.540213 seconds (932.56 M allocations: 507.172 GiB, 13.99% gc time, 75.69% compilation time)
+
+He    E = -2.2385477942629   ref = -2.2382578241080   err = -2.900e-04
+
+============================================================
+System  E_DMRG                E_ref                 Error       
+------------------------------------------------------------
+H           -0.6698595509728      -0.6697771382138    -8.241e-05
+He          -2.2385477942629      -2.2382578241080    -2.900e-04
+Done at Tue Apr  7 10:19:31 EDT 2026

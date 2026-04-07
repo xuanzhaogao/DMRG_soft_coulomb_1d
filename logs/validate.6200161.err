@@ -1,0 +1,127 @@
+Precompiling packages...
+  29451.0 ms  ✓ Revise (serial)
+  1 dependency successfully precompiled in 29 seconds
+Precompiling packages...
+    769.8 ms  ✓ DataValueInterfaces
+    914.8 ms  ✓ DefineSingletons
+    929.4 ms  ✓ ExternalDocstrings
+    721.0 ms  ✓ IteratorInterfaceExtensions
+    918.3 ms  ✓ InverseFunctions
+    784.8 ms  ✓ IfElse
+    821.6 ms  ✓ ExprTools
+    746.9 ms  ✓ CommonWorldInvalidations
+    945.5 ms  ✓ Zeros
+    784.0 ms  ✓ DataAPI
+    967.5 ms  ✓ VectorInterface
+    950.7 ms  ✓ DocStringExtensions
+   1273.4 ms  ✓ InlineStrings
+   1555.9 ms  ✓ FillArrays
+    821.9 ms  ✓ ArgCheck
+    772.9 ms  ✓ PackageExtensionCompat
+    819.5 ms  ✓ TableTraits
+    810.8 ms  ✓ Indexing
+    863.2 ms  ✓ StaticArraysCore
+    852.3 ms  ✓ SerializedElementArrays
+    968.7 ms  ✓ TupleTools
+   1251.2 ms  ✓ InitialValues
+   2265.7 ms  ✓ HalfIntegers
+    757.4 ms  ✓ PrecompileTools
+   2196.4 ms  ✓ ConstructionBase
+    698.2 ms  ✓ InverseFunctions → InverseFunctionsDatesExt
+   1145.3 ms  ✓ Requires
+   1550.6 ms  ✓ Baselet
+   1098.4 ms  ✓ ThreadedScans
+    886.8 ms  ✓ SciMLPublic
+    809.3 ms  ✓ CompositionsBase
+    750.9 ms  ✓ StridedViews
+   2191.4 ms  ✓ BitIntegers
+   1102.9 ms  ✓ FillArrays → FillArraysSparseArraysExt
+    967.9 ms  ✓ InverseFunctions → InverseFunctionsTestExt
+    731.3 ms  ✓ ConstructionBase → ConstructionBaseLinearAlgebraExt
+    802.5 ms  ✓ Adapt
+    645.3 ms  ✓ CompositionsBase → CompositionsBaseInverseFunctionsExt
+   1987.7 ms  ✓ Compat
+   1343.9 ms  ✓ Dictionaries
+    735.7 ms  ✓ Referenceables
+    728.2 ms  ✓ Compat → CompatLinearAlgebraExt
+   2467.0 ms  ✓ Tables
+   1008.1 ms  ✓ Adapt → AdaptSparseArraysExt
+   3756.8 ms  ✓ MacroTools
+   3739.1 ms  ✓ TimerOutputs
+   1035.0 ms  ✓ SplitApplyCombine
+   2066.5 ms  ✓ Strided
+   1957.2 ms  ✓ ArrayInterface
+   1079.0 ms  ✓ SimpleTraits
+    638.8 ms  ✓ ArrayInterface → ArrayInterfaceStaticArraysCoreExt
+    859.0 ms  ✓ ArrayInterface → ArrayInterfaceSparseArraysExt
+   1745.0 ms  ✓ Setfield
+   2267.5 ms  ✓ Functors
+   2977.4 ms  ✓ ChainRulesCore
+   1436.3 ms  ✓ SplittablesBase
+    822.3 ms  ✓ ArrayInterface → ArrayInterfaceChainRulesCoreExt
+   3486.7 ms  ✓ Accessors
+   5696.9 ms  ✓ Static
+    768.6 ms  ✓ Accessors → LinearAlgebraExt
+    931.0 ms  ✓ Accessors → TestExt
+   2259.3 ms  ✓ ChainRulesCore → ChainRulesCoreSparseArraysExt
+   1072.2 ms  ✓ BangBang
+    810.3 ms  ✓ BangBang → BangBangTablesExt
+   8497.7 ms  ✓ StaticArrays
+    857.0 ms  ✓ BangBang → BangBangChainRulesCoreExt
+   7227.3 ms  ✓ IsApprox
+   1043.4 ms  ✓ MicroCollections
+    893.4 ms  ✓ Adapt → AdaptStaticArraysExt
+    943.1 ms  ✓ ConstructionBase → ConstructionBaseStaticArraysExt
+    950.0 ms  ✓ FillArrays → FillArraysStaticArraysExt
+   1029.4 ms  ✓ Accessors → StaticArraysExt
+   1047.2 ms  ✓ BangBang → BangBangStaticArraysExt
+   2066.9 ms  ✓ StaticArrays → StaticArraysChainRulesCoreExt
+   6222.2 ms  ✓ StaticArrayInterface
+   4171.6 ms  ✓ Transducers
+   1059.3 ms  ✓ StaticArrayInterface → StaticArrayInterfaceStaticArraysExt
+   1006.9 ms  ✓ Transducers → TransducersAdaptExt
+   1000.3 ms  ✓ Transducers → TransducersReferenceablesExt
+   2711.2 ms  ✓ EllipsisNotation
+   4271.6 ms  ✓ Folds
+  13362.2 ms  ✓ ArrayLayouts
+   1601.7 ms  ✓ ArrayLayouts → ArrayLayoutsSparseArraysExt
+   2689.6 ms  ✓ BlockArrays
+   1543.9 ms  ✓ BlockArrays → BlockArraysAdaptExt
+   2395.8 ms  ✓ Transducers → TransducersBlockArraysExt
+   6227.3 ms  ✓ NDTensors
+   6930.6 ms  ✓ ITensors
+   2366.9 ms  ✓ ITensors → ITensorsVectorInterfaceExt
+  89 dependencies successfully precompiled in 53 seconds. 35 already precompiled.
+Precompiling packages...
+   1135.8 ms  ✓ DistributedExt (serial)
+  1 dependency successfully precompiled in 1 seconds
+Precompiling packages...
+   2008.3 ms  ✓ KrylovKit
+    961.3 ms  ✓ KrylovKit → KrylovKitChainRulesCoreExt
+   5755.6 ms  ✓ ITensorMPS
+   2572.0 ms  ✓ ITensorMPS → ITensorMPSChainRulesCoreExt
+  4 dependencies successfully precompiled in 12 seconds. 124 already precompiled.
+Precompiling packages...
+    807.1 ms  ✓ JLLWrappers
+    910.7 ms  ✓ MPIPreferences
+    845.8 ms  ✓ MicrosoftMPI_jll
+    964.4 ms  ✓ Xorg_libpciaccess_jll
+   1048.2 ms  ✓ Libiconv_jll
+   1055.4 ms  ✓ libaec_jll
+   1543.4 ms  ✓ MPItrampoline_jll
+   1018.6 ms  ✓ XML2_jll
+   1070.8 ms  ✓ Hwloc_jll
+   1478.6 ms  ✓ OpenMPI_jll
+   1772.1 ms  ✓ MPICH_jll
+   2521.2 ms  ✓ HDF5_jll
+   7807.9 ms  ✓ HDF5
+  13 dependencies successfully precompiled in 17 seconds. 32 already precompiled.
+Precompiling packages...
+   2939.2 ms  ✓ NDTensors → NDTensorsHDF5Ext
+  1 dependency successfully precompiled in 3 seconds. 127 already precompiled.
+Precompiling packages...
+   2452.5 ms  ✓ ITensors → ITensorsHDF5Ext
+  1 dependency successfully precompiled in 3 seconds. 140 already precompiled.
+Precompiling packages...
+   2504.8 ms  ✓ ITensorMPS → ITensorMPSHDF5Ext
+  1 dependency successfully precompiled in 3 seconds. 145 already precompiled.
