@@ -1,4 +1,4 @@
-# DMRG Benchmark for 1D Soft-Coulomb Atoms: Preliminary Report
+# DMRG Benchmark for 1D Soft-Coulomb Atoms
 
 ## Method
 
@@ -8,7 +8,9 @@ Density Matrix Renormalization Group (DMRG) implemented with ITensor.jl.
 **Hamiltonian.** Under the Born-Oppenheimer approximation with a single nucleus fixed
 at the origin, the Hamiltonian reads
 
-$$H = \sum_{i=1}^{N}\left[-\frac{1}{2}\nabla_{r_i}^{2} - z\,v(|r_i|)\right] + \sum_{i<j}v(r_{ij}),\qquad v(u)=\frac{1}{\sqrt{1+u^{2}}}$$
+$$
+H = \sum_{i=1}^{N}  [-\frac{1}{2}\nabla_{r_i}^{2} - z\,v(|r_i|)]  + \sum_{i \leq j} v(r_{ij}), \qquad v(u)=\frac{1}{\sqrt{1+u^{2}}}
+$$
 
 where $z$ is the nuclear charge, $N$ the electron count, and $v(u)$ is the soft-Coulomb
 kernel.
@@ -55,28 +57,3 @@ extrapolated from their SOG-TNN convergence study.
 | O      | 8   | 8   | 400 | -21.7114042086978*          | -21.6995705618073          | -11.834*              | 1000*                | 95+*   |
 
 \* Still running; energy not yet converged.
-
-## Discussion
-
-All DMRG energies lie **below** the Wu et al. reference values. Since DMRG is
-variational on the discretized lattice, the lower energies indicate that our grid
-discretization ($\delta=0.1$) introduces a systematic negative bias relative to the
-continuum-limit references reported by Wu et al. This is expected: a coarser grid
-effectively softens the kinetic energy, lowering the total energy. The discrepancy
-grows with electron count—from 0.08 mHartree for H to several milliHartree for the
-heavier atoms—consistent with the per-electron discretization error accumulating.
-
-For H and He, where the SG-CI references are exact on the same type of grid model,
-our agreement to 0.08 and 0.29 mHartree respectively confirms that the SOE-MPO
-construction and DMRG convergence are reliable.
-
-The required MPS bond dimension and number of sweeps increase significantly with
-system size: $\chi\approx67$ for Be versus the $\chi=1000$ ceiling for O (which has
-not yet converged). The N and O calculations are still in progress, and their
-energies will decrease further as additional sweeps are performed.
-
-To enable a more precise comparison with the Wu et al. extrapolated references,
-future work should include:
-- A finer grid ($\delta=0.05$) to reduce discretization error and enable
-  Richardson extrapolation to the $\delta\to 0$ continuum limit.
-- Larger bond dimensions ($\chi>1000$) for the N and O systems.
