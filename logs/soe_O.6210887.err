@@ -1,0 +1,3 @@
+[ Info: Phase 1: ramp-up (7 sweeps)
+┌ Warning: Max sweeps reached (200), |ΔE| = 0.0
+└ @ Main ~/work/DMRG_soft_coulomb_1d/src/dmrg_soe_single.jl:65
